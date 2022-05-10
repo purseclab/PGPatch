@@ -1,0 +1,4 @@
+### (1) A given formula ###9, G ((vel_variance >= (fs_ekf_thresh*2)) ~ ((over_thresh_count_t = over_thresh_count_t+2)))
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+1, ~, vel_variance, >=, fs_ekf_thresh*2, 
+1, ~, over_thresh_count_t, =, over_thresh_count_t+2, 

@@ -1,0 +1,6 @@
+;;h_ctl_roll_Kffa;;0;;5000;;
+;;h_ctl_roll_Kffd;;0;;5000;;
+;;h_ctl_pitch_Kffa;;0;;5000;;
+;;h_ctl_pitch_Kffd;;0;;5000;;
+;;h_ctl_roll_igain;;0;;5000;;
+;;h_ctl_pitch_igain;;0;;5000;;

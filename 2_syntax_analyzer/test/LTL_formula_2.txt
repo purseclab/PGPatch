@@ -1,0 +1,6 @@
+### (1) A given formula ###2, G ((armed = false) ^1 (SAIL_ENABLE = 1) ^2 (WNDVN_TYPE = 0)) ~ (pre_arm_checks = error)
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+3, ^1, armed, =, false, 
+3, ^1, SAIL_ENABLE, =, 1, 
+2, ^2, WNDVN_TYPE, =, 0, 
+1, ~, pre_arm_checks, =, error, 

@@ -1,0 +1,3 @@
+###ArduPilot
+###rover
+G ((armed = false) ^1 (SAIL_ENABLE = 1) ^2 (WNDVN_TYPE = 0)) ~ (pre_arm_checks = error)

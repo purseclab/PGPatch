@@ -1,0 +1,60 @@
+------------------------------ 1. Install & config LLVM 10.0.0 to run these LLVM passes ------------------------------
+1) Install mandatory packages
+>sudo apt update
+>sudo apt install build-essential libtool autoconf unzip wget
+>sudo snap install cmake --classic
+>cmake --version
+
+2) Download LLVM source
+>wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz
+
+>wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang-10.0.0.src.tar.xz
+
+>wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/compiler-rt-10.0.0.src.tar.xz
+
+>chmod 777 llvm-10.0.0.src.tar.xz
+>chmod 777 clang-10.0.0.src.tar.xz
+>chmod 777 compiler-rt-10.0.0.src.tar.xz
+
+>tar -xf ./llvm-10.0.0.src.tar.xz
+>tar -xf clang-10.0.0.src.tar.xz
+>tar -xf compiler-rt-10.0.0.src.tar.xz
+
+3) Build LLVM source
+>mv clang-10.0.0.src llvm-10.0.0.src/tools/clang
+
+>mv compiler-rt-10.0.0.src llvm-10.0.0.src/projects/compiler-rt
+
+>mkdir llvm-10.0.0.obj
+>cd llvm-10.0.0.obj
+
+> cmake -DCMAKE_BUILD_TYPE=MinSizeRel ../llvm-10.0.0.src
+
+> make -j8
+
+4) Add paths for LLVM and Clang
+export LLVM_SRC=<path-to-LLVM-source>/llvm-10.0.0.src
+export LLVM_OBJ=<path-to-LLVM-obj>/llvm-10.0.0.obj
+export LLVM_DIR=<path-to-LLVM-obj>/llvm-10.0.0.obj
+export PATH=$LLVM_DIR/bin:$PATH
+
+
+------------------------------ 2. Run the LLVM passes ------------------------------
+1) Copy and paste 'getfunctions' and 'getvariables' folders into
+<path-to-LLVM-source>/llvm-10.0.0.src/lib/Transforms
+
+2) Register these two passes in CMakeLists
+<path-to-LLVM-source>/llvm-10.0.0.src/lib/Transforms$ vim CMakeLists.txt
+
+# add the below line
+add_subdirectory(getfunctions)
+add_subdirectory(getvariables)
+
+3) Re-compile LLVM source
+>cd <path-to-LLVM-source>/llvm-10.0.0.src
+>cmake -DCMAKE_BUILD_TYPE=MinSizeRel ../llvm-10.0.0.src 
+>make -j8
+
+4) Running the passes with opt
+<path-to-LLVM-obj>/llvm-10.0.0.obj$opt -load lib/getfunctions.so -getfunctions < PX4_1_11.bc > /dev/null
+<path-to-LLVM-obj>/llvm-10.0.0.obj$opt -load lib/getvariables.so -getvariables < PX4_1_11.bc > /dev/null

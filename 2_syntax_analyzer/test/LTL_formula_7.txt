@@ -1,0 +1,5 @@
+### (1) A given formula ###7, G (GPS_fail = on) ^1 (Barometer = on) ~ (ALT_src = Barometer)
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+2, ^1, GPS_fail, =, on, 
+2, ^1, Barometer, =, on, 
+1, ~, ALT_src, =, Barometer, 

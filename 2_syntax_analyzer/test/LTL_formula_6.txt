@@ -1,0 +1,5 @@
+### (1) A given formula ###6, G (MainALT_src = Barometer) ~ (ALT_current = ALT_barometer) ^1 (ALT_current != ALT_gps)
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+1, ~, MainALT_src, =, Barometer, 
+2, ^1, ALT_current, =, ALT_barometer, 
+2, ^1, ALT_current, !=, ALT_gps, 

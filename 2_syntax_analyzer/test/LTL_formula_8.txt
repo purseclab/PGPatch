@@ -1,0 +1,6 @@
+### (1) A given formula ###8, G ((MODE_t = ALTHOLD) @1 (THROTTLE_t = middle) ^1 (Term1 = Term2)) ~ (ALT_t = ALT_t_1)
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+2, @1, MODE_t, =, ALTHOLD, 
+3, ^1, THROTTLE_t, =, middle, 
+3, ^1, Term1, =, Term2, 
+1, ~, ALT_t, =, ALT_t_1, 

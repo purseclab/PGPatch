@@ -1,0 +1,13 @@
+### Format in case of configuration parameters
+###### [parameter, parameter name, value]
+###
+### Format in case of user commands
+###### [user_command, user command number, values]
+###
+### Format in case of environmental factors
+###### [env, env name, value]
+###
+###user_command,400,1,0,0,0,0,0,0
+env,SIM_WIND_SPD,5
+parameter,SAIL_ENABLE,1
+parameter,WNDVN_TYPE,0

@@ -1,0 +1,6 @@
+### (1) A given formula ###3, G (Failsafe = on) ^1 ((FS_BATT_ENABLE = 2) ^2 (home_distance >= 2)) ~ (mode = RTL)
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+2, ^1, Failsafe, =, on, 
+3, ^2, FS_BATT_ENABLE, =, 2, 
+3, ^2, home_distance, >=, 2, 
+1, ~, mode, =, RTL, 

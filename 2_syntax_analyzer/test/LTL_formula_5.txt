@@ -1,0 +1,5 @@
+### (1) A given formula ###5, G (ALT_current <= RTL_alt) ^1 (MODE_current = RTL) ~ (ALT_previous <= ALT_current)
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+2, ^1, ALT_current, <=, RTL_alt, 
+2, ^1, MODE_current, =, RTL, 
+1, ~, ALT_previous, <=, ALT_current, 

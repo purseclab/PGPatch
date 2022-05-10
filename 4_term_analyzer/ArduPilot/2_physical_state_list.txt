@@ -1,0 +1,86 @@
+armed
+RC1
+RC2
+RC3
+RC4
+Air speed
+Ground speed
+Heading
+Throttle
+Altitude
+Latitude
+Longitude
+Climb rate
+Roll
+Pitch
+Yaw
+Roll speed
+Pitch speed
+Yaw speed
+Reference roll
+Reference pitch
+Reference Yaw
+Reference altitude
+Reference air speed
+Status
+Gyroscope/accelerometer
+accelerometer/magnetometer
+Barometer
+GPS
+parachute
+Pre-arm checking
+mission
+num_GPS
+ALT_GPS
+Vertical speed
+mode
+battery
+mission time
+vibration_x
+vibration_y
+vibration_z
+target_position_x
+target_position_y
+PWM0
+PWM1
+PWM2
+PWM3
+PWM4
+PWM5
+PWM6
+terrain
+starting poing
+altitude frame
+compass
+obstacle
+waypoint
+Land
+proximity
+fence
+wind
+Circle
+Loiter
+Avoid
+RTL
+rangefinder
+SMART_RTL
+ZIGZAG
+ACRO
+BRAKE
+STABILIZE
+ALT_HOLD 
+AUTO 
+GUIDED 
+DRIFT 
+SPORT 
+FLIP 
+AUTOTUNE 
+POSHOLD 
+THROW 
+AVOID_ADSB 
+GUIDED_NOGPS 
+FLOWHOLD  
+FOLLOW    
+SYSTEMID  
+AUTOROTATE 
+beacon

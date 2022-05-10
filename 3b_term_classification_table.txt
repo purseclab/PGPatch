@@ -1,0 +1,11 @@
+### Goal: Classify each term into one of the followings:
+### (1) configuration parameter
+### (2) function
+### (3) variable
+### (4) the RV's physical state
+### Output format: [Tree level, operator, left node, center node, right node, Matched type] ###
+### '###'denotes a comment. ###
+3, ^1, armed, =, false, physical_state
+3, ^1, SAIL_ENABLE, =, 1, configuration_parameter
+2, ^2, WNDVN_TYPE, =, 0, configuration_parameter
+1, ~, pre_arm_checks, =, error, function

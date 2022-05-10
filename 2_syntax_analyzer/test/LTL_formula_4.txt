@@ -1,0 +1,5 @@
+### (1) A given formula ###4, G ((mode = LAND) @1 (mode = RTL)) ~ (_constraints.tilt_t = _constraints.tilt_t_1)
+### (2) Output format: [Tree level, operator, left node, center node, right node] ###
+2, @1, mode, =, LAND, 
+2, @1, mode, =, RTL, 
+1, ~, _constraints.tilt_t, =, _constraints.tilt_t_1, 
