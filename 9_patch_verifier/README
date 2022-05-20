@@ -1,0 +1,8 @@
+1) Copy and paste these file into [path to ArduPilot]/Tools/autotest/
+2) Full test command: ./Tools/autotest/autotest.py --no-clean build.Copter test.Copter build.Rover test.Rover test.Balancebot build.Plane test.Plane test.QuadPlane build.Sub test.Sub build.Helicopter test.Helicopter build.Tracker test.Tracker
+3) Note that you need to just run one vehicle type's autotest script.
+---> (e.g.,) when you want to test ArduCopter: ./Tools/autotest/autotest.py --no-clean build.Copter test.Copter
+4) Open another cmd
+5) python2 patch_type_analyzer.py
+
+If 'patch_type_analyzer.py' could not trigger the logic bug, it means that the candidate patch fixes the logic bug.
