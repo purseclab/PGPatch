@@ -7,7 +7,19 @@
 ### Format in case of environmental factors
 ###### [env, env name, value]
 ###
+### G ((armed = false) ^1 (SAIL_ENABLE = 1) ^2 (WNDVN_TYPE = 0)) ~ (pre_arm_checks = error)
 ###user_command,400,1,0,0,0,0,0,0
-env,SIM_WIND_SPD,5
-parameter,SAIL_ENABLE,1
-parameter,WNDVN_TYPE,0
+###env,SIM_WIND_SPD,5
+###parameter,SAIL_ENABLE,1
+###parameter,WNDVN_TYPE,0
+###
+###G ((PSC_ANGLE_MAX >=0) ^1 (PSC_ANGLE_MAX <=45))
+###parameter,PSC_ANGLE_MAX,-9999999999999999999999
+###user_command,mode,LOITER,0,0,0,0,0,0
+###
+###G ((altitude < 10) ~ (mode != FLIP))
+user_command,mode,GUIDED,0,0,0,0,0,0
+user_command,400,1,0,0,0,0,0,0
+user_command,22,0,0,0,0,0,0,9
+user_command,mode,ALT_HOLD,0,0,0,0,0,0
+user_command,mode,FLIP,0,0,0,0,0,0

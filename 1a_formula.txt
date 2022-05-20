@@ -1,3 +1,11 @@
 ###ArduPilot
 ###rover
-G ((armed = false) ^1 (SAIL_ENABLE = 1) ^2 (WNDVN_TYPE = 0)) ~ (pre_arm_checks = error)
+###G ((armed = false) ^1 (SAIL_ENABLE = 1) ^2 (WNDVN_TYPE = 0)) ~ (pre_arm_checks = error)
+###
+###ArduPilot
+###copter
+###G ((PSC_ANGLE_MAX >=0) ^1 (PSC_ANGLE_MAX <=45))
+###
+###ArduPilot
+###copter
+G ((altitude < 10) ~ (mode != FLIP))

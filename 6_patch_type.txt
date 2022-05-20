@@ -1,0 +1,4 @@
+### '###'denotes a comment. ###
+### Patch type inference result
+### Reason: (1) Satisfy pre-conditions but violate post-conditions and (2) the buggy behavior occurs during the whole flight stages
+ADD
